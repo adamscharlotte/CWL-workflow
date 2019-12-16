@@ -23,7 +23,7 @@ outputs:
 
 steps:
     modifications:
-        run: /Users/adams/Desktop/Thesis/Thesis/Code/CWL/Tools/modifications.cwl
+        run: modifications.cwl
         in: 
             R_script: R_script
             Path: Path
@@ -33,7 +33,7 @@ steps:
             [tol_py_csv]
 
     modifications_fast:
-        run: /Users/adams/Desktop/Thesis/Thesis/Code/CWL/Tools/modifications_fast.cwl
+        run: modifications_fast.cwl
         in: 
             python_script: python_script
             name: name
