@@ -15,7 +15,7 @@ inputs:
 outputs:
     identifications_csv:
         type: File
-        outputSource: identifications/identifications_cvs
+        outputSource: identifications/identifications_csv
 
 steps:
     mztab_to_csv:
