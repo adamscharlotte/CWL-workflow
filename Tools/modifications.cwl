@@ -1,37 +1,36 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-baseCommand: [python3]
+baseCommand: [Rscript]
 
 requirements:
  - class: InlineJavascriptRequirement
-
 inputs:
-    python_script:
+    modifications_R:
         type: File
         inputBinding:
             position: 1
 
-    name:
-        type: string
+    csv:
+        type: File
         inputBinding:
             position: 2
 
-    unimod_path:
+    bait:
         type: string
         inputBinding:
             position: 3
- 
-    input_path:
-        type: File
+
+    mass_tolerance:
+        type: string
         inputBinding:
             position: 4
 
 outputs:
-    mod_csv:
+    tol_py_csv:
         type: File
         outputBinding: 
-            glob: $(inputs.name)_mod.csv
+            glob: $(inputs.bait)_tol_py.csv
 #    tibbles:
  #       type: stdout
 #stdout: tibble.txt          #this will appear in the working directory

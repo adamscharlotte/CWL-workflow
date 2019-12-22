@@ -1,12 +1,13 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-baseCommand: [Rscript]
+baseCommand: [python3]
 
 requirements:
  - class: InlineJavascriptRequirement
+
 inputs:
-    R_script:
+    mztab_to_csv_py:
         type: File
         inputBinding:
             position: 1
@@ -16,21 +17,16 @@ inputs:
         inputBinding:
             position: 2
 
-    name:
+    bait:
         type: string
         inputBinding:
             position: 3
 
-    mass_tolerance:
-        type: string
-        inputBinding:
-            position: 4
-
 outputs:
-    tol_py_csv:
+    csv:
         type: File
         outputBinding: 
-            glob: $(inputs.name)_tol_py.csv
+            glob: $(inputs.bait).csv
 #    tibbles:
  #       type: stdout
 #stdout: tibble.txt          #this will appear in the working directory
