@@ -13,9 +13,9 @@ inputs:
         default: "50"
 
 outputs:
-    identifications:
+    identifications_csv:
         type: File
-        outputSource: identifications/identifications
+        outputSource: identifications/identifications_csv
 
 steps:
     mztab_to_csv:
@@ -35,8 +35,9 @@ steps:
             mass_tolerance: mass_tolerance
             csv: mztab_to_csv/csv
         out:
-            [identifications]
-
+            [identifications_csv]
+            
+            
 #    MassIVE_identifications:
  #       run: Tools/MassIVE_identifications.cwl
   #      in: 

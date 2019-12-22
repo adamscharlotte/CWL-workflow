@@ -28,7 +28,7 @@ inputs:
             position: 4
 
 outputs:
-    identifications:
+    identifications_csv:
         type: File
         outputBinding: 
             glob: $(inputs.bait)_identifications.csv
