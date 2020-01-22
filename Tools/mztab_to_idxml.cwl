@@ -7,13 +7,13 @@ requirements:
  - class: InlineJavascriptRequirement
 
 inputs:
-    mztab_to_csv_py:
+    mztab_to_idxml_py:
         type: File
         inputBinding:
             position: 1
 
-    mztab:
-        type: File
+    Path:
+        type: string
         inputBinding:
             position: 2
 
@@ -23,10 +23,10 @@ inputs:
             position: 3
 
 outputs:
-    csv:
+    idxml:
         type: File
         outputBinding: 
-            glob: $(inputs.bait).csv
+            glob: $(inputs.bait).idxml
 #    tibbles:
  #       type: stdout
 #stdout: tibble.txt          #this will appear in the working directory

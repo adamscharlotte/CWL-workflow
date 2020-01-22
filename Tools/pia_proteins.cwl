@@ -1,18 +1,18 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-baseCommand: [python3]
+baseCommand: [Rscript]
 
 requirements:
  - class: InlineJavascriptRequirement
 
 inputs:
-    mztab_to_csv_py:
+    pia_proteins_R:
         type: File
         inputBinding:
             position: 1
 
-    mztab:
+    csv:
         type: File
         inputBinding:
             position: 2
@@ -23,10 +23,11 @@ inputs:
             position: 3
 
 outputs:
-    csv:
+    proteins_csv:
         type: File
         outputBinding: 
-            glob: $(inputs.bait).csv
-#    tibbles:
+            glob: $(inputs.bait)_proteins.csv
+
+#    ANN-SoLo_identifications:
  #       type: stdout
 #stdout: tibble.txt          #this will appear in the working directory
