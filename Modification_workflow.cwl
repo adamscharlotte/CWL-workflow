@@ -6,7 +6,7 @@ requirements:
 inputs:
     mztab_to_csv_py: File
     modifications_R: File
-    Path: string
+    mztab: File
     bait: string
     mass_tolerance:
         type: string
@@ -27,7 +27,7 @@ steps:
         run: Tools/mztab_to_csv.cwl
         in:
             mztab_to_csv_py: mztab_to_csv_py
-            Path: Path
+            mztab: mztab
             bait: bait
         out:
             [csv]
