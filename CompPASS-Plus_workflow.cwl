@@ -42,7 +42,7 @@ steps:
         out:
             [protein_accessions_csv]
 
-    CompPASS:
+    id_remapper:
         run: Tools/id_remapper.cwl
         in:
             id_remapper_py: id_remapper_py
