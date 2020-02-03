@@ -42,7 +42,7 @@ steps:
         out:
             [protein_accessions_csv]
 
-    id_remapper:
+    CompPASS:
         run: Tools/id_remapper.cwl
         in:
             id_remapper_py: id_remapper_py
@@ -55,8 +55,8 @@ steps:
         out:
             [remapped_identifiers_csv]
     
-    pia_proteins:
-        run: Tools/pia_proteins.cwl
+    CompPASS:
+        run: Tools/CompPASS.cwl
         in: 
             CompPASS_R: CompPASS_R
             protein_directory_path: protein_directory_path
