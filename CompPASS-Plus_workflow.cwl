@@ -31,7 +31,7 @@ outputs:
 
 steps:
     CompPASS_pre:
-        run: Tools/mztab_to_csv.cwl
+        run: Tools/CompPASS_pre.cwl
         in:
             CompPASS_pre_R: CompPASS_pre_R
             protein_directory_path: protein_directory_path
