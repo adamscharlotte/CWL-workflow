@@ -24,10 +24,6 @@ inputs:
         type: string
         default: "CSV"
     
-    mztab_to_csv_py: File
-    pia_proteins_R: File
-    bait: string    
-
 outputs:
     CompPASS_csv:
         type: File
