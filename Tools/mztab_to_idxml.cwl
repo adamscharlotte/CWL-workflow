@@ -12,8 +12,8 @@ inputs:
         inputBinding:
             position: 1
 
-    Path:
-        type: string
+    mztab:
+        type: File
         inputBinding:
             position: 2
 
