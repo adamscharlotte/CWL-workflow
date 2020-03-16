@@ -9,7 +9,7 @@ inputs:
     bait: string
     fasta: File
     idxml_output: string
-    pepxml_output: string
+    mzid_output: string
     missing_decoy_action:
         type: string
         default: "silent"
@@ -22,14 +22,14 @@ inputs:
     allow_unmatched:
         type: boolean
         default: TRUE
-    unique_per_protein:
-        type: boolean
-        default: TRUE
+    # unique_per_protein:
+    #     type: boolean
+    #     default: TRUE
 
 outputs:
-    pepxml:
+    mzid:
         type: File
-        outputSource: ID_file_converter/pepxml
+        outputSource: ID_file_converter/mzid
 
 steps:
     mztab_to_idxml:
@@ -54,19 +54,19 @@ steps:
         out:
             [idxml]
 
-    ID_filter:
-        run: Tools/ID_filter.cwl
-        in: 
-            input: peptide_indexer/idxml
-            output: idxml_output
-            unique_per_protein: unique_per_protein
-        out:
-            [idxml]
+    # ID_filter:
+    #     run: Tools/ID_filter.cwl
+    #     in: 
+    #         input: peptide_indexer/idxml
+    #         output: idxml_output
+    #         unique_per_protein: unique_per_protein
+    #     out:
+    #         [idxml]
     
     ID_file_converter:
         run: Tools/ID_file_converter.cwl
         in: 
-            input: ID_filter/idxml
-            output: pepxml_output
+            input: peptide_indexer/idxml
+            output: mzid_output
         out:
-            [pepxml]
+            [mzid]

@@ -17,7 +17,7 @@ inputs:
             prefix: -out
 
 outputs:
-    pepxml:
+    mzid:
         type: File
         outputBinding: 
             glob: $(inputs.output)
