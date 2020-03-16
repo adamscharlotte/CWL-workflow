@@ -29,7 +29,7 @@ inputs:
         inputBinding:
             position: 4    
 
-    outfile:
+    xml_output:
         type: string
         inputBinding:
             position: 5

@@ -24,7 +24,7 @@ inputs:
         inputBinding:
             position: 3
             prefix: -paramFile
-
+        
     proteinExport:
         type: string
         inputBinding:
@@ -39,13 +39,17 @@ inputs:
     bait:
         type: string
         inputBinding:
-            position: 6   
+            position: 6
 
 outputs:
-    mztab:
+    mzidentml:
         type: File
         outputBinding: 
-            glob: $(inputs.bait).mztab
+            glob: $(inputs.bait).mzIdentML
+    # csv:
+    #     type: File
+    #     outputBinding: 
+    #         glob: $(inputs.bait).csv
 #    tibbles:
  #       type: stdout
 #stdout: tibble.txt          #this will appear in the working directory
