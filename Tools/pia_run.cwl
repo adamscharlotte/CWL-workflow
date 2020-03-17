@@ -25,7 +25,7 @@ inputs:
             position: 3
             prefix: -paramFile
         
-    proteinExport:
+    psmExport:
         type: string
         inputBinding:
             position: 4
