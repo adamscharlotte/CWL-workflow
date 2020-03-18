@@ -28,7 +28,7 @@ inputs:
         type: string
         default: "test"
     jar: File
-    proteinExport: string
+    psmExport: string
     paramFile: File
     fileType: 
         type: string
@@ -96,7 +96,7 @@ steps:
             bait: bait
             fileType: fileType
             paramFile: paramFile
-            proteinExport: proteinExport
+            psmExport: psmExport
         out:
             [mzidentml]
             # [csv]
