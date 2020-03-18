@@ -29,7 +29,7 @@ inputs:
         type: string
         inputBinding:
             position: 4
-            prefix: -proteinExport
+            prefix: -psmExport
     
     fileType:
         type: string
