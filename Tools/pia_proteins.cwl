@@ -26,7 +26,7 @@ outputs:
     proteins_csv:
         type: File
         outputBinding: 
-            glob: $(inputs.bait)_proteins.csv
+            glob: $(inputs.bait).csv
 
 #    ANN-SoLo_identifications:
  #       type: stdout

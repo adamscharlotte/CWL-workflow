@@ -25,11 +25,11 @@ inputs:
             position: 3
             prefix: -paramFile
         
-    psmExport:
+    proteinExport:
         type: string
         inputBinding:
             position: 4
-            prefix: -psmExport
+            prefix: -proteinExport
     
     fileType:
         type: string
@@ -42,10 +42,10 @@ inputs:
             position: 6
 
 outputs:
-    mzidentml:
+    mztab:
         type: File
         outputBinding: 
-            glob: $(inputs.bait).mzIdentML
+            glob: $(inputs.bait).mztab
     # csv:
     #     type: File
     #     outputBinding: 
