@@ -6,6 +6,7 @@ requirements:
 inputs:
     mztab_to_idxml_py: File  
     mztab: File
+    # idxml: File
     bait: string
     fasta: File
     idxml_output: string
@@ -52,9 +53,9 @@ outputs:
     # pia_genes:
     #     type: File
     #     outputSource: pia_genes/genes_csv
-    # csv:
-    #     type: File
-    #     outputSource: pia_run/csv
+    #csv:
+     #   type: File
+      #  outputSource: pia_run/csv
 
 steps:
     mztab_to_idxml:
