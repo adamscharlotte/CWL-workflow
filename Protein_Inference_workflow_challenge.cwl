@@ -7,7 +7,7 @@ inputs:
     mztab_to_idxml_py: File  
     mztab: File
     # idxml: File
-    bait: string
+    filename: string
     fasta: File
     idxml_output: string
     missing_decoy_action:
@@ -68,7 +68,7 @@ steps:
         in:
             mztab_to_idxml_py: mztab_to_idxml_py
             mztab: mztab
-            bait: bait
+            bait: filename
         out:
             [idxml]
 
@@ -91,7 +91,7 @@ steps:
             cp: cp
             compiler: compiler
             idxml: peptide_indexer/idxml
-            bait: bait
+            bait: filename
             xml_output: xml_output
             name: name
         out:
@@ -102,7 +102,7 @@ steps:
         in: 
             jar: jar
             xml: pia_xml/xml
-            bait: bait
+            bait: filename
             fileType: fileType
             paramFile: paramFile
             proteinExport: proteinExport
